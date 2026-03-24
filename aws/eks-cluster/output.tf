@@ -79,3 +79,11 @@ output "eks_node_security_group_id" {
 output "eks_private_subnet_ids_for_cluster" {
   value = sort(data.aws_subnets.eks_private.ids)
 }
+
+output "ebs_csi_role_arn" {
+  value = aws_iam_role.ebs_csi.arn
+}
+
+output "lbc_role_arn" {
+  value = aws_iam_role.lbc.arn
+}

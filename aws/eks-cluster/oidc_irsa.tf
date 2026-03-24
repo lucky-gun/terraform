@@ -11,3 +11,23 @@ resource "aws_iam_openid_connect_provider" "eks" {
 data "tls_certificate" "eks_ca" {
   url = aws_eks_cluster.main.identity[0].oidc[0].issuer
 }
+
+locals {
+  oidc_provider_url = replace(
+    aws_eks_cluster.main.identity[0].oidc[0].issuer,
+    "https://",
+    ""
+  )
+
+  irsa = {
+    ebs_csi = {
+      namespace = "kube-system"
+      sa_name   = "ebs-csi-controller-sa"
+    }
+
+    lbc = {
+      namespace = "kube-system"
+      sa_name   = "aws-load-balancer-controller"
+    }
+  }
+}
