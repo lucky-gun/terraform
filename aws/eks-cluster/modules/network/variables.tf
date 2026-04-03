@@ -7,20 +7,17 @@ variable "vpc" {
   description  = "VPC CIDR 대역 및 name 확인"
 }
 
-variable "public_subnets" {
-  type = list(object({
-    cidr_block = string
-    az_index   = number
-  }))
-
-  description  = "Public Subnet 대역"
+variable "eks_cluster_name" {
+  type = string
 }
 
-variable "private_subnets" {
-  type = list(object({
-    cidr_block = string
-    az_index   = number
-  }))
+variable "az" {
+  type = map(string)
+}
 
-  description  = "Private Subnet 대역"
+variable "subnets" {
+  type = map(object({
+    az   = string
+    type = string
+  }))
 }
