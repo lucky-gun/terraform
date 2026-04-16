@@ -1,6 +1,7 @@
-variable "oidc" {
-  type = object({
-    oidc_issuer_url = string
-    tags            = map(string)
-  })
+variable "oidc_issuer_url" {
+  type = string
+}
+
+variable "tags" {
+  type = map(string)
 }

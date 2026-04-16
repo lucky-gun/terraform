@@ -42,11 +42,9 @@ provider "cloudflare" {
 
 module "oidc" {
   source = "../../modules/iam/oidc-provider"
-  oidc = {
-    oidc_issuer_url = module.eks.oidc_issuer_url
-    tags = merge(local.common_tags, {
-        Name = "${local.eks_cluster_name}-oidc-provider"
-    })
-  }
+  oidc_issuer_url = module.eks.oidc_issuer_url
+  tags = merge(local.common_tags, {
+      Name = "${local.eks_cluster_name}-oidc-provider"
+  })
   depends_on = [module.eks]
 }
