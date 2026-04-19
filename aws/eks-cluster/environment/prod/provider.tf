@@ -37,7 +37,7 @@ provider "helm" {
 }
 
 provider "cloudflare" {
-  api_token = "fPjw7b6s355V7v9FYJoxgZw-NoN-48Sbv8XMzmQY"
+  api_token = ""
 }
 
 module "oidc" {
