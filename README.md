@@ -2,7 +2,7 @@
 
 <img src="./docs/terraform-image.png" width="700"/>
 
-🔗 Blog: https://lucky-gun.com/category/infra/terraform/
+🔗 Blog: [Terraform 자료](https://lucky-gun.com/tag/terraform/)
 
 이 저장소는 Terraform 학습, 실습, 그리고 실제 운영 환경 구성을 기록한 공간입니다.
 
