@@ -1,13 +1,21 @@
-# Terraform
-Terraform 관련 저장소입니다.
+# Terraform Repository
 
 <img src="./docs/terraform-image.png" width="700"/>
-URL : https://lucky-gun.com/category/infra/terraform/ <br><br>
 
-# Tree
+🔗 Blog: https://lucky-gun.com/category/infra/terraform/
 
-1. AWS
-- Terraform을 이용해서 EKS 구성하기
+이 저장소는 Terraform 학습, 실습, 그리고 실제 운영 환경 구성을 기록한 공간입니다.
 
-2. docs
-- 각종 README.md 관련 소스 코드
+## 📂 Repository Structure
+
+### 🧪 AWS 
+| 디렉토리 | 설명 |
+|----------|------|
+| eks-cluster | EKS Cluster 기반 인프라 자동 완성 코드 정리 (모듈화) |
+
+---
+
+### ⚡ kakaocloud
+| 디렉토리 | 설명 |
+|----------|------|
+| vm | kakaocloud를 통해 VM 자동 구축을 위한 정리(튜토리얼) |
